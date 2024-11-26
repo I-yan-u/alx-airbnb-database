@@ -25,7 +25,7 @@ CREATE TABLE Property (
 
 CREATE TABLE Booking (
     booking_id VARCHAR(64) PRIMARY KEY,
-    property_id VARCHAR(64),
+    property_id VARCHAR(64) UNIQUE,
     user_id VARCHAR(64),
     start_date DATE NOT NULL,
     end_date DATE NOT NULL,
@@ -38,7 +38,7 @@ CREATE TABLE Booking (
 
 CREATE TABLE Payment (
     payment_id VARCHAR(64) PRIMARY KEY,
-    booking_id VARCHAR(64),
+    booking_id VARCHAR(64) UNIQUE,
     amount DECIMAL(10, 2) NOT NULL,
     payment_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     payment_method ENUM('credit_card', 'paypal', 'stripe') NOT NULL,
