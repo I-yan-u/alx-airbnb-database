@@ -1,0 +1,2 @@
+# AirBnb Database
+## SQL scripts
