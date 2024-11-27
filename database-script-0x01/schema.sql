@@ -2,7 +2,7 @@ CREATE TABLE User (
     user_id VARCHAR(64) PRIMARY KEY,
     first_name VARCHAR(64) NOT NULL,
     last_name VARCHAR(64) NOT NULL
-    email VARCHAR(32) UNIQUE NOT NULL,
+    email VARCHAR(64) UNIQUE NOT NULL,
     password_hash VARCHAR(64) NOT NULL,
     phone_number VARCHAR(16),
     role ENUM('guest', 'host', 'admin') NOT NULL,
