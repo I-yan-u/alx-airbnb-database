@@ -4,8 +4,10 @@ INNER JOIN user ON booking.user_id = user.user_id;
 
 -- Left join
 SELECT property.property_id, review.rating FROM property
-LEFT JOIN review ON property.property_id = review.property_id;
+LEFT JOIN review ON property.property_id = review.property_id
+ORDER BY property.property_id;
 
 -- Full outer join
 SELECT * FROM user
-FULL  JOIN booking ON user.user_id = booking.user_id;
+FULL OUTER  JOIN booking ON user.user_id = booking.user_id
+ORDER BY user.user_id;
