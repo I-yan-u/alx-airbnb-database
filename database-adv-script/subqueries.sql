@@ -11,5 +11,5 @@ SELECT * FROM user
 WHERE user_id IN (
     SELECT user_id FROM booking
     GROUP BY user_id
-    HAVING COUNT(DISTINCT property_id) > 3
+    HAVING COUNT(property_id) > 3
 );
